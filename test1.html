@@ -3,27 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <style type="text/css">
-    * {
-      margin: 0;
-      padding: 0;
-    }
 
-    #box {
-      width: 200px;
-      height: 200px;
-      background: deeppink;
-    }
-  </style>
 </head>
 <body>
-<div id="box"></div>
 </body>
 <script type="text/javascript">
-  window.onload = function () {
-    var box = document.getElementById('box');
+  console.log(typeof 'true');//string
+  console.log(typeof true);//Boolean
+  console.log(typeof 'undefined');//string
+  console.log(typeof typeof 'true');//string
+  console.log(typeof typeof true);//string
+  console.log(typeof null);//object
+  console.log(typeof function () {});//function
+  console.log(typeof []);//object
+  console.log(typeof {});//object
+  console.log(typeof console);//object
+  console.log(typeof console.log);//function
+  console.log(typeof console.log());//undefined
+
+  console.log({} instanceof Object)//true
+  console.log([] instanceof Array)//true
+  console.log(null instanceof Object)//false
+  console.log(null == undefined)//true
+  console.log(null === undefined)//false
 
 
+  /*
+  * undefined:代表定义了，没有赋值，默认值为undefined，
+  * */
+  //undefined的几种情况：
+  //1.
+  var a;
+  console.log(a);//undefined
+  //2.
+  function fun(c) {
+    //3.
+    console.log(c)//undefined
   }
+  console.log(fun())//undefined
+    //4.
+  var obj = {};
+  console.log(obj.d)//undefined
+
+
 </script>
 </html>
